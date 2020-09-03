@@ -1,1 +1,89 @@
 Q1.Program to search for a particular cahracter in a string.
+
+<html>
+   <head>
+      <title>Character in String</title>
+   </head>
+   <body>
+      <script>
+            var char = 'z';
+            var text = "Search character z in this string";
+            if (text.indexOf(char)>-1 )
+            {
+              document.write("found the character");
+            }
+            else{
+              document.write("not found the character");
+            }
+      </script>
+   </body>
+</html>
+
+Q2.Program to convert minutes to seconds.
+
+<html>
+   <head>
+      <title>Minutes 2 Seconds</title>
+   </head>
+   <body>
+      <script>
+            var min = 600;
+            var sec = min * 60;
+         document.write(sec + "sec");
+      </script>
+   </body>
+</html>
+
+Q3.Program to search for a element in a array of strings.
+
+<html>
+   <head>
+      <title>Search Element</title>
+   </head>
+   <body>
+      <script>
+          var cars = ["Audi", "Chevrolet", "Ford", "Ferrari", "BMW", "Acura"];
+          var a = cars.indexOf("Ford");
+          if(a>-1 && a<cars.length){
+            document.write("Element is found in location "+(a+1));
+          }
+          else{
+            document.write("Element not found");
+          }
+      </script>
+   </body>
+</html>
+
+Q4.Program to display only elements containing 'a' in them from a array.
+
+<html>
+   <head>
+      <title>Elements containing 'a' in array</title>
+   </head>
+   <body>
+      <script>
+          var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+          var i;
+          for (i = 0; i < cars.length; i++) {
+            if(cars[i].includes("a"))
+            { 
+              document.write(cars[i] + " ");
+              }
+              }
+      </script>
+   </body>
+</html>
+
+Q5.Print an array in reverse order.
+
+<html>
+   <head>
+      <title>Reverse Array</title>
+   </head>
+   <body>
+      <script>
+            var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            document.write(arr.reverse());
+      </script>
+   </body>
+</html>
