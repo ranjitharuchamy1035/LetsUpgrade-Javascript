@@ -1,0 +1,189 @@
+Question 1:
+HTML file:
+<html>
+<head>
+<title>Image</title>
+</head>
+<body>
+<div align="center">
+<h2>Change Image Onclick</h2>
+<img src="https://dogtime.com/assets/uploads/2018/10/puppies-cover.jpg" id="image" width="400px"/> <br> <br>
+<button onclick="reset()"> Reset </button>
+<button onclick="changeImage_2()" > Change </button>
+<button onclick="changeImage_3()">  Change Again </button>
+</div>
+<script src="images.js"></script>
+</body>
+</html>
+JS file:
+function changeImage_2() {
+	const ele = document.getElementById("image");
+	const newUrl = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=640:*";
+	ele.src = newUrl;
+}
+function changeImage_3() {
+	const ele = document.getElementById("image");
+	const newUrl = "https://i.cbc.ca/1.5507480.1585002199!/fileImage/httpImage/puppy-facts.jpg";
+	ele.src = newUrl;
+}
+function reset() {
+	const ele = document.getElementById("image");
+	const newUrl = "https://dogtime.com/assets/uploads/2018/10/puppies-cover.jpg";
+	ele.src = newUrl;
+}
+
+Question 2:
+Html file:
+<html>
+<head>
+<title> Copy Value </title>
+</head>
+<body>
+<div class="login">
+<p> Text is copied from input one to input two when button is clicked </p>
+<div class="form-group">
+<input type="text" class="input" placeholder="Enter some text"/> </br> </br> 
+</div>
+<div class="form-group">
+<input type="text" class="input" placeholder="Text will appear after button click"/> </br> </br>
+<div class="form-group">
+<button onclick="copy_text()"> Click </button>
+</div>
+<script src="functions.js"></script>
+</body>
+</html>
+Js file:
+function copy_text() {	
+	const ele = document.getElementsByClassName("input");
+	const eles = ele[0].value;
+	ele[1].value = eles;
+	
+}
+
+Question 3:
+HTML file:
+<html>
+<head>
+<title> Array of Objects </title>
+</head>
+<body>
+<script src="function.js"></script>
+</body>
+</html>
+JS file:
+let games = [ 
+	{
+	name: "LUDO",
+	age: 21,
+	country: "India",
+	hobby: ["Token", "Six", "Join Room"]
+	},
+	{
+	name: "PUBG",
+	age: 26,
+	country: "China",
+	hobby: ["Weapons", "Bullets", "Guard"]
+	},
+	{
+	name: "Snake and ladder",
+	age: 29,
+	country: "India",
+	hobby: ["Ladder", "Numbers", "Snake"]
+	}
+]
+games.forEach(function (value) {
+   console.log("Name: "+(value.name));
+   console.log("Age: "+value.age);
+   console.log("Country: "+value.country);
+   console.log("Hobbies are:");
+        for (let j = 0; j < value.hobby.length; j++)  {
+	 console.log(value.hobby[j]);
+}
+});
+
+
+Question 4(A):
+HTML file:
+<html>
+<head>
+<title> Array of Objects </title>
+</head>
+<body>
+<script src="function.js"></script>
+</body>
+</html>
+JS file:
+let games = [ 
+	{
+	name: "LUDO",
+	age: 33,
+	country: "India",
+	hobby: ["Token", "Six", "Join Room"]
+	},
+	{
+	name: "PUBG",
+	age: 26,
+	country: "China",
+	hobby: ["Weapons", "Bullets", "Guard"]
+	},
+	{
+	name: "Snake and ladder",
+	age: 21,
+	country: "India",
+	hobby: ["Ladder", "Numbers", "Snake"]
+	}
+]
+
+games.forEach(function (value) {
+   if((value.age)<30) {
+   console.log("Name: "+(value.name));
+   console.log("Age: "+value.age);
+   console.log("Country: "+value.country);
+   console.log("Hobbies are:");
+        for (let j = 0; j < value.hobby.length; j++)  {
+	 console.log(value.hobby[j]);
+} }
+});
+
+Question 4(B):
+HTML file:
+<html>
+<head>
+<title> Array of Objects </title>
+</head>
+<body>
+<script src="function.js"></script>
+</body>
+</html>
+JS file:
+let games = [ 
+	{
+	name: "LUDO",
+	age: 33,
+	country: "India",
+	hobby: ["Token", "Six", "Join Room"]
+	},
+	{
+	name: "PUBG",
+	age: 26,
+	country: "China",
+	hobby: ["Weapons", "Bullets", "Guard"]
+	},
+	{
+	name: "Snake and ladder",
+	age: 21,
+	country: "India",
+	hobby: ["Ladder", "Numbers", "Snake"]
+	}
+]
+
+games.forEach(function (value) {
+   if((value.country)=="India") {
+   console.log("Name: "+(value.name));
+   console.log("Age: "+value.age);
+   console.log("Country: "+value.country);
+   console.log("Hobbies are:");
+        for (let j = 0; j < value.hobby.length; j++)  {
+	 console.log(value.hobby[j]);
+} }
+});
